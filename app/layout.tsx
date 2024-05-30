@@ -17,16 +17,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  pageProps,
 }: Readonly<{
   children: React.ReactNode;
-  pageProps: any;
 }>) {
   return (
-    <ClerkProvider appearance={{
-        variables:{ colorPrimary:'#624cf5'}
-      }}
-      {...pageProps}>
+    <ClerkProvider >
       <html lang="en">
         <body className={cn("font-IBMPlex antialiased", IBMPlex.variable)}>
           {children}
